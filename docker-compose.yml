@@ -3,14 +3,14 @@ services:
   postgres:
     image: postgres:13
     environment:
-      - POSTGRES_USER=sokny
-      - POSTGRES_PASSWORD=qwerty@123
-      - POSTGRES_DB=db_postgres
+      - POSTGRES_USER=username
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=database
     ports:
-      - "6222:50"
+      - "8080:80"
     volumes:
   nginx:
     image: nginx:latest
     ports:
-      - "90:92"
+      - "9090:90"
     volumes:
