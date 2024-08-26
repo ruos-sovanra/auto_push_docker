@@ -1,2 +1,16 @@
 version: '3.8'
 services:
+  postgres:
+    image: postgres:13
+    environment:
+      - POSTGRES_USER=asura
+      - POSTGRES_PASSWORD=qwerty
+      - POSTGRES_DB=test
+    ports:
+      - "8000:8080"
+    volumes:
+  nginx:
+    image: nginx:latest
+    ports:
+      - "8080:80"
+    volumes:
